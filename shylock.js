@@ -6,6 +6,7 @@ var $prompt = $('#prompt');
 
 var $shylockBotPurse = 10000;
 var $antonioPurse = 0;
+var $bassanioPurse = 0;
 
 
 //ACT 1
@@ -33,9 +34,23 @@ var logResponse = function(event){
 
           $shylockBotPurse = $shylockBotPurse - parseInt(loanArray[2]);
           console.log('ShylockBot\'s current purse is: ' + $shylockBotPurse + ' ducats');
+          
           $antonioPurse = $antonioPurse + parseInt(loanArray[2]);  
           console.log('Antonio\'s current purse is: ' + $antonioPurse + ' ducats');
-      }
+
+      } else if (loanArray[1] === 'bassanio') {
+          $log.append($logItem.text($prompt.val()).addClass('command'));
+        
+          var $actionItem = $('<li>').addClass('action');
+          $actionItem.text('ShylockBot gives ' + loanArray[1] + ' ' + loanArray[2] + ' ducats.');
+          $log.append($actionItem);
+
+
+          $shylockBotPurse = $shylockBotPurse - parseInt(loanArray[2]);
+          console.log('ShylockBot\'s current purse is: ' + $shylockBotPurse + ' ducats');
+          
+          $bassanioPurse = $bassanioPurse + parseInt(loanArray[2]);
+          console.log('Bassanio\'s current purse is: ' + $bassanioPurse + ' ducats');      }
 
 
     }
