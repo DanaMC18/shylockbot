@@ -11,21 +11,23 @@ var $shylockBot = {
 
 //ACT 1
 
-var $printPurse = function(event){
+var $logResponse = function(event){
   if (event.keyCode === 13) {
-    var $logItem = $('<li>');
-    $log.append($logItem.text($prompt.val()).addClass('command'))
-    $prompt.text('');
+    if ($prompt.val() === 'purse'){ 
+      var $logItem = $('<li>');
+      $log.append($logItem.text($prompt.val()).addClass('command'))
+      $prompt.text('');
 
-    var $actionItem = $('<li>').addClass('action');
-    $actionItem.text('ShylockBot pulls out his purse containing ' + $shylockBot.purse + ' ducats');
-    $log.append($actionItem);
+      var $actionItem = $('<li>').addClass('action');
+      $actionItem.text('ShylockBot pulls out his purse containing ' + $shylockBot.purse + ' ducats');
+      $log.append($actionItem);
+    }
   }
 }
 
 
 
-$prompt.on('keypress', $printPurse);
+$prompt.on('keypress', $logResponse);
 
 
 })

@@ -3,25 +3,37 @@ body {
   font-style: helvetica;
 }
 
+h1 {
+  color: white;
+}
+
 #logbox {
   border: 2px solid black;
   background-image: url('http://theshakespeareblog.com/wp-content/uploads/2012/05/boydellscan0005-e1412455732503.jpg');
   background-position: center;
   padding-bottom: 50px;
+}
 
+#log {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+  width: 75%;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 #prompt {
   border: 1px solid black;
   font-size: 25px;
-  margin-top: 300px;
-  width: 50%;
+  margin-top: 350px;
+  width: 40%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .command {
-  background: gray;
+  background: grey;
 }
 
 .action {
