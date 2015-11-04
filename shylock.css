@@ -1,6 +1,6 @@
 body {
   background: blanchedalmond;
-  font-style: helvetica;
+  font-family: helvetica;
 }
 
 h1 {
@@ -12,6 +12,7 @@ h1 {
   background-image: url('http://theshakespeareblog.com/wp-content/uploads/2012/05/boydellscan0005-e1412455732503.jpg');
   background-position: center;
   padding-bottom: 50px;
+  list-style-type: none;
 }
 
 #log {
